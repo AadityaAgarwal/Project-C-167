@@ -7,7 +7,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <meta name="apple-mobile-web-app-capable" content="yes" /> 
+  <meta name="apple-mobile-web-app-capable" content="yes" />
 
   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
 
@@ -44,44 +44,23 @@
     <div>Loading, please wait...</div>
   </div>
 
- 
-  <a-scene 
-    vr-mode-ui="enabled: false;"
-    renderer="logarithmicDepthBuffer: true;" 
-    embedded
+
+  <a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;" embedded
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
-
+    <a-entity id='camera' position='0 0 10' camera></a-entity>
     <a-assets>
-
-      <video id="video" 
-        src="./assets/videos/soccer-match.mp4"
-        preload="auto"  
-        loop="true" 
-        playsinline
-        webkit-playsinline 
-        autoplay 
-        crossorigin="anonymous">
+      <video id="video" src="./assets/videos/soccer-match.mp4" preload="auto" loop="true" playsinline webkit-playsinline
+        autoplay crossorigin="anonymous">
       </video>
-  
+
     </a-assets>
-  
-    <a-nft id="one" 
-      type="nft" 
-      url="./assets/marker-desc/stick-man" 
-      smooth="true" 
-      smoothCount="10" 
-      smoothTolerance=".01"
+
+    <a-nft id="one" type="nft" url="./assets/marker-desc/stick-man" smooth="true" smoothCount="10" smoothTolerance="0.01"
       smoothThreshold="5">
-  
-      <a-video id="vid" 
-        src="#video" 
-        width="300" 
-        height="300" 
-        position="150 150 -50" 
-        rotation="-90 0 0"
-        play-on-click>
+
+      <a-video id="vid" src="#video" width="300" height="300" position="150 150 -50" rotation="-90 0 0" play-on-click>
       </a-video>
-  
+
     </a-nft>
 
   </a-scene>
